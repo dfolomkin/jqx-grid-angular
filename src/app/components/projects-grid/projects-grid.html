@@ -1,0 +1,15 @@
+<div class="projects-grid-container">
+  <div class="projects-grid-container__control-bar">
+    <jqx-combo-box ng-model="$ctrl.selectedEmployeeName" jqx-ng-model jqx-settings="$ctrl.comboBoxSettings" jqx-source="$ctrl.employeesList"
+      jqx-on-select="$ctrl.onSelect(event)"></jqx-combo-box>
+
+    <jqx-button-group jqx-mode="radio" jqx-on-buttonclick="$ctrl.onSwitch(event)">
+      <button>View 1</button>
+      <button>View 2</button>
+    </jqx-button-group>
+  </div>
+
+  <div class="grid-wrapper">
+    <jqx-grid jqx-settings="$ctrl.gridSettings" jqx-width="$ctrl.gridWidth" jqx-source="$ctrl.gridData" jqx-columns="$ctrl.selectedColumnSet"></jqx-grid>
+  </div>
+</div>
